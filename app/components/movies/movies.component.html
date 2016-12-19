@@ -38,7 +38,7 @@
             <div *ngFor="let movie of popularList;let i=index" class="col-md-2">
                 <div *ngIf="i < 1">
                     <!-- Its trying to load image from localhost-->
-                    <img src="{{movie.small_cover_image}">
+                    <img  src={{movie.large_cover_image}}>
                     <h4>{{movie.title}}</h4>
                     <p>{{movie.year}}</p>
 
