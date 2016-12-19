@@ -37,9 +37,12 @@
         <div class="row">
             <div *ngFor="let movie of popularList;let i=index" class="col-md-2">
                 <div *ngIf="i < 1">
+                    <!-- Its trying to load image from localhost-->
                     <img src="{{movie.small_cover_image}">
                     <h4>{{movie.title}}</h4>
                     <p>{{movie.year}}</p>
+
+                    <!-- just to check that it is the correct image link -->
                     <p>{{movie.small_cover_image}}</p>
                     <p><a class="btn btn-default" routerLink="/movie/{{movie.id}}">View Details</a></p>
                 </div>

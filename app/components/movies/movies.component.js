@@ -16,16 +16,18 @@ var MoviesComponent = (function () {
         this._movieService = _movieService;
         this._movieService.getPopular().subscribe(function (res) {
             _this.popularList = res.data.movies;
+            //this is to check that it has the objects returned from yts api
             console.log(res.data.movies);
         });
+        //these need to be populated correctly still, just using same data from above to silence errors
         this._movieService.getInTheaters().subscribe(function (res) {
-            _this.theatersList = res.results;
+            _this.theatersList = res.data.movies;
         });
     }
     MoviesComponent.prototype.searchMovies = function () {
         var _this = this;
         this._movieService.searchMovies(this.searchStr).subscribe(function (res) {
-            _this.searchRes = res.results;
+            _this.searchRes = res.data.movies;
         });
     };
     return MoviesComponent;
