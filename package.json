@@ -61,5 +61,7 @@
     "protractor": "^3.3.0",
     "rimraf": "^2.5.2"
   },
-  "repository": {}
+  "repository": {
+    "torrent-stream": "^0.21.3"
+  }
 }
