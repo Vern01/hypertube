@@ -36,14 +36,13 @@
     <div class="panel-body">
         <div class="row">
             <div *ngFor="let movie of popularList;let i=index" class="col-md-2">
-                <div *ngIf="i < 1">
+                <div *ngIf="i < 6">
                     <!-- Its trying to load image from localhost-->
-                    <img  src={{movie.large_cover_image}}>
+                    <img  src={{movie.medium_cover_image}}>
                     <h4>{{movie.title}}</h4>
                     <p>{{movie.year}}</p>
 
                     <!-- just to check that it is the correct image link -->
-                    <p>{{movie.small_cover_image}}</p>
                     <p><a class="btn btn-default" routerLink="/movie/{{movie.id}}">View Details</a></p>
                 </div>
             </div>    
@@ -59,7 +58,7 @@
         <div class="row">
             <div *ngFor="let movie of theatersList;let i=index" class="col-md-2">
                 <div *ngIf="i < 6">
-                    <img *ngIf="movie.poster_path" class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+                    <img src={{movie.large_cover_image}}>
                     <h4>{{movie.title}}</h4>  
                     <p>{{movie.release_date}}</p>  
                     <p><a class="btn btn-default" routerLink="/movie/{{movie.id}}">View Details</a></p>

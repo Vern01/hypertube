@@ -8,7 +8,7 @@ import {MovieService} from '../../services/movie.service';
     templateUrl: 'movie.component.html'
 })
 export class MovieComponent implements OnInit{
-    movie: Object;
+    private tuna: Object;
     
     constructor(
         private router:ActivatedRoute, 
@@ -19,9 +19,12 @@ export class MovieComponent implements OnInit{
     ngOnInit(){
         this.router.params.subscribe((params) => {
             let id = params['id'];
-            this._movieService.getMovie(id).subscribe(movie => {
-                this.movie = movie;
+            this._movieService.getMovie(id).subscribe(res => {
+                this.tuna = res.data.movie;
+         //          console.log(res.data.movie);
+                   console.log(this.tuna);
             });
         });
     }
 }
+

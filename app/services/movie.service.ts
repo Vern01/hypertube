@@ -26,7 +26,12 @@ export class MovieService{
     }
     
     getMovie(id:string){
-        return this.http.get('https://yts.ag/api/v2/list_movies.json')
+        console.log(`movie fucking service ${id}`);
+        var jan = `https://yts.ag/api/v2/movie_details.json?movie_id=${id}`;
+        console.log(jan);
+        return this.http.get(jan) 
             .map(res => res.json());
     }
 }
+
+

@@ -29,7 +29,10 @@ var MovieService = (function () {
             .map(function (res) { return res.json(); });
     };
     MovieService.prototype.getMovie = function (id) {
-        return this.http.get('https://yts.ag/api/v2/list_movies.json')
+        console.log("movie fucking service " + id);
+        var jan = "https://yts.ag/api/v2/movie_details.json?movie_id=" + id;
+        console.log(jan);
+        return this.http.get(jan)
             .map(function (res) { return res.json(); });
     };
     return MovieService;

@@ -20,8 +20,10 @@ var MovieComponent = (function () {
         var _this = this;
         this.router.params.subscribe(function (params) {
             var id = params['id'];
-            _this._movieService.getMovie(id).subscribe(function (movie) {
-                _this.movie = movie;
+            _this._movieService.getMovie(id).subscribe(function (res) {
+                _this.tuna = res.data.movie;
+                //          console.log(res.data.movie);
+                console.log(_this.tuna);
             });
         });
     };
