@@ -23,7 +23,7 @@ export class MovieComponent implements OnInit{
                 this.tuna = res.data.movie;
          //          console.log(res.data.movie);
                    console.log(this.tuna);
-                   console.log(this.tuna.torrents.0.url);
+                  // console.log(this.tuna.torrents.0.url);
             });
         });
     }

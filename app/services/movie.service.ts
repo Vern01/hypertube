@@ -14,7 +14,7 @@ export class MovieService{
         return this.http.get('https://yts.ag/api/v2/list_movies.json')
             .map(res => res.json());
     }
-    
+
     getInTheaters(){
         return this.http.get('https://yts.ag/api/v2/list_movies.json')
             .map(res => res.json());

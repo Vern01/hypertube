@@ -24,7 +24,7 @@ var MovieComponent = (function () {
                 _this.tuna = res.data.movie;
                 //          console.log(res.data.movie);
                 console.log(_this.tuna);
-                console.log(_this.tuna.torrents, .0.url);
+                // console.log(this.tuna.torrents.0.url);
             });
         });
     };

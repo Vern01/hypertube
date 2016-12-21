@@ -12,11 +12,12 @@
                     <ul class="list-group">
                         <li class="list-group-item">Genres: <span *ngFor="let genre of tuna.genres;">{{genre}}, </span></li>    
                         <li class="list-group-item">Release Date: {{tuna.date_uploaded}}</li>
-                    </ul>
+                        <li class="list-group-item">{{tuna.description_intro}}</li>                    </ul>
                     <br>
-                    <a *ngIf="tuna.url" href="{{tuna.url}}" target="_blank" class="btn btn-default">Visit Movie Website</a>
+                    <a *ngIf="tuna.url" href="{{tuna.url}}" target="_blank" class="btn btn-sm">Visit Movie Website</a>
+                    <br>
                     <div *ngFor="let torrent of tuna.torrents;">
-                    <a *ngIf="torrent" href="{{torrent.url}}" target="_blank" class="btn btn-default">{{torrent.quality}}</a>
+                    <a *ngIf="torrent" href="{{torrent.url}}" target="_blank" class="btn btn-sm">{{torrent.quality}}</a>
                     </div>
                 </div>  
             </div>
