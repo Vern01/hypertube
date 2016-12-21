@@ -21,7 +21,8 @@ export class MovieService{
     }
     
     searchMovies(searchStr:string){
-        return this.http.get('https://yts.ag/api/v2/list_movies.json')
+        console.log(searchStr);
+        return this.http.get(`https://yts.ag/api/v2/list_movies.json?query_term=${searchStr}`)
             .map(res => res.json());
     }
     

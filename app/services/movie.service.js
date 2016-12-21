@@ -25,7 +25,8 @@ var MovieService = (function () {
             .map(function (res) { return res.json(); });
     };
     MovieService.prototype.searchMovies = function (searchStr) {
-        return this.http.get('https://yts.ag/api/v2/list_movies.json')
+        console.log(searchStr);
+        return this.http.get("https://yts.ag/api/v2/list_movies.json?query_term=" + searchStr)
             .map(function (res) { return res.json(); });
     };
     MovieService.prototype.getMovie = function (id) {

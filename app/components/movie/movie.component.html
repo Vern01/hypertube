@@ -15,6 +15,9 @@
                     </ul>
                     <br>
                     <a *ngIf="tuna.url" href="{{tuna.url}}" target="_blank" class="btn btn-default">Visit Movie Website</a>
+                    <div *ngFor="let torrent of tuna.torrents;">
+                    <a *ngIf="torrent" href="{{torrent.url}}" target="_blank" class="btn btn-default">{{torrent.quality}}</a>
+                    </div>
                 </div>  
             </div>
         </div> 
